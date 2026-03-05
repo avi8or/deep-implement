@@ -12,17 +12,10 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-from enum import StrEnum
 from pathlib import Path
 from typing import Self
 
-
-class TaskStatus(StrEnum):
-    """Status values for tasks."""
-
-    PENDING = "pending"
-    IN_PROGRESS = "in_progress"
-    COMPLETED = "completed"
+from scripts.lib.impl_tasks import TaskStatus  # noqa: F401 — re-exported
 
 
 class TaskWriteError(Exception):
